@@ -1,0 +1,9 @@
+{
+  "name": "bensonwong.ca",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "bun scripts/serve.mjs",
+    "validate": "bun scripts/validate.mjs"
+  }
+}
