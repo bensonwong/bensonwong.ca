@@ -32,6 +32,7 @@ motion, media failure, and playback controls in a browser.
 - `index.html`: page content and metadata.
 - `styles.css`: responsive styling with a locally hosted Inter font.
 - `portfolio.js`: visible-only video loading and playback, motion controls, and mobile career placement.
+- `phimask-carousel.js`: PHI Mask example selection, responsive media, and demo links.
 - `assets/work/`: product demonstrations and posters, with attribution in its README.
 - `assets/fonts/`: Inter Latin subset and its SIL Open Font License.
 - `og-image.png`: social preview image.
@@ -45,7 +46,7 @@ Descriptions, posters, and playback links also work without JavaScript.
 
 ## Publishing
 
-GitHub Pages serves the repository root from gh-pages. Preview and review changes on a branch before merging into gh-pages.
+GitHub Pages serves the repository root from main. Preview and review changes on a branch before merging into main.
 
 `scratch/` and `screenshots/` are private working directories, ignored by Git.
 Keep resumes and source documents there. Never copy them into published assets.
