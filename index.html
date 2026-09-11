@@ -8,7 +8,7 @@
     <meta name="theme-color" content="#f8f7f4">
     <meta name="robots" content="index, follow">
     <title>Benson Wong | Software engineer &amp; founder</title>
-    <meta name="description" content="Software engineer and founder in Edmonton, Canada. Building tools for token compression, verifiable citations, and privacy. Previously founded Can I Pay Less, acquired by Ratehub.">
+    <meta name="description" content="Software engineer and founder in Edmonton, Canada. Building PHI Mask and DeepCitation. Previously founded Can I Pay Less, acquired by Ratehub.">
     <link rel="canonical" href="https://bensonwong.ca/">
     <meta property="og:type" content="profile">
     <meta property="og:site_name" content="Benson Wong">
@@ -18,14 +18,14 @@
     <meta property="og:image" content="https://bensonwong.ca/og-image.png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
-    <meta property="og:image:alt" content="Benson Wong. Software engineer and founder. Selected work in token compression, citations, and privacy.">
+    <meta property="og:image:alt" content="Benson Wong. Selected work: PHI Mask, DeepCitation, and the retired Clamp project. Built in Canada.">
     <meta property="profile:first_name" content="Benson">
     <meta property="profile:last_name" content="Wong">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Benson Wong | Software engineer &amp; founder">
     <meta name="twitter:description" content="An engineer and founder building tools for working with AI and checking its work.">
     <meta name="twitter:image" content="https://bensonwong.ca/og-image.png">
-    <meta name="twitter:image:alt" content="Benson Wong. Software engineer and founder. Selected work in token compression, citations, and privacy.">
+    <meta name="twitter:image:alt" content="Benson Wong. Selected work: PHI Mask, DeepCitation, and the retired Clamp project. Built in Canada.">
     <link rel="icon" href="/favicon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="preload" href="/assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
@@ -58,13 +58,12 @@
       <main id="main">
         <section class="intro-grid" aria-labelledby="page-title">
           <div class="intro-main">
-            <p class="eyebrow">Software engineer &amp; founder</p>
             <h1 id="page-title">I build tools for AI.<br><span>And for checking<br class="desktop-break"> its work.</span></h1>
             <p class="intro-copy">I'm Benson, an engineer in Edmonton, Canada. I build products, dig into the systems behind them, and follow the evidence when something doesn't add up.</p>
             <a class="text-link intro-link" href="#work">Explore selected work <span aria-hidden="true">↓</span></a>
           </div>
           <aside class="career" aria-labelledby="career-title">
-            <h2 class="eyebrow" id="career-title">A few chapters</h2>
+            <h2 class="sr-only" id="career-title">Experience</h2>
             <ol class="career-list">
               <li><span class="career-date">Now</span><div><strong>Independent builder</strong><span>AI tools &amp; systems research</span></div></li>
               <li><span class="career-date">2024</span><div><strong>FileLasso</strong><span>Co-founder &amp; software engineer</span></div></li>
@@ -78,24 +77,22 @@
         <section class="work-section" id="work" aria-labelledby="work-title">
           <header class="section-heading">
             <h2 id="work-title">Selected work<span class="section-count" aria-hidden="true"> / 03</span></h2>
-            <button class="motion-toggle" id="motion-toggle" type="button" aria-controls="clamp-film deepcitation-film phimask-film" hidden><span class="motion-icon" aria-hidden="true">Ⅱ</span><span data-motion-label>Pause motion</span></button>
+            <button class="motion-toggle" id="motion-toggle" type="button" aria-controls="phimask-film deepcitation-film clamp-film" hidden><span class="motion-icon" aria-hidden="true">Ⅱ</span><span data-motion-label>Pause motion</span></button>
           </header>
           <div class="project-grid">
-            <article class="project project--featured" aria-labelledby="clamp-title">
-              <div class="project-stage project-stage--clamp">
-                <div class="stage-heading" aria-hidden="true"><span>[clamp]</span><span>Context, compressed.</span></div>
-                <div class="film-frame film-frame--clamp">
-                  <img class="film-poster" src="/assets/work/clamp-poster.webp" width="816" height="332" alt="" fetchpriority="high">
-                  <video class="project-film" id="clamp-film" muted loop playsinline preload="none" poster="/assets/work/clamp-poster.webp" aria-hidden="true"><source data-src="/assets/work/clamp.mp4" type="video/mp4"></video>
+            <article class="project project--featured" aria-labelledby="phimask-title">
+              <div class="project-stage project-stage--phimask">
+                <div class="film-frame film-frame--phimask">
+                  <img class="film-poster" src="/assets/work/phimask-poster.webp" width="1440" height="810" alt="" fetchpriority="high">
+                  <video class="project-film" id="phimask-film" muted loop playsinline preload="none" poster="/assets/work/phimask-poster.webp" aria-hidden="true"><source data-src="/assets/work/phimask.mp4" type="video/mp4"></video>
                 </div>
-                <span class="stage-footnote" aria-hidden="true">Tokenization example</span>
               </div>
               <div class="project-caption">
-                <div><h3 id="clamp-title">clamp</h3><p>Save tokens before the model sees them.</p></div>
-                <span class="project-type">Developer tooling</span>
+                <div><h3 id="phimask-title"><a href="https://phimask.com/">PHI Mask <span aria-hidden="true">↗</span></a></h3><p>Keep private details out of the prompt.</p></div>
+                <span class="project-type">Chrome extension</span>
               </div>
-              <div class="project-detail"><p>Reversible context compression with inspectable savings. My work here combines Rust development with token-accounting research.</p><div class="project-actions"><a class="text-link" href="/assets/work/clamp.mp4">Watch full-size demo <span aria-hidden="true">↗</span></a><a class="text-link" href="#contact">Ask me about clamp <span aria-hidden="true">↗</span></a></div></div>
-              <p class="sr-only">The animation shows repeated context becoming a shorter representation. This is a demonstration, not a production savings measurement.</p>
+              <div class="project-detail"><p>I build the TypeScript extension and browser workflow for masking names, dates, and identifiers while keeping a document's useful content readable.</p><div class="project-actions"><a class="text-link" href="https://chromewebstore.google.com/detail/phi-mask-data-privacy-mas/kcmpppojpihbagegmplldklbpfagodge">Try the Chrome extension <span aria-hidden="true">↗</span></a><a class="text-link" href="/assets/work/phimask.mp4">Watch full-size demo <span aria-hidden="true">↗</span></a></div></div>
+              <p class="sr-only">The demonstration masks identifiers in a fictional medical record while keeping the lab results visible.</p>
             </article>
             <article class="project" aria-labelledby="deepcitation-title">
               <div class="project-stage project-stage--citation">
@@ -111,43 +108,43 @@
               <div class="project-detail"><p>I build the SDK and the interfaces for checking model citations against source documents and inspecting the supporting passages.</p><div class="project-actions"><a class="text-link" href="https://github.com/DeepCitation/deepcitation">Explore the code <span aria-hidden="true">↗</span></a><a class="text-link" href="/assets/work/deepcitation.mp4">Watch full-size demo <span aria-hidden="true">↗</span></a></div></div>
               <p class="sr-only">The demonstration follows a citation from a model response to the matching passage in a source document.</p>
             </article>
-            <article class="project" aria-labelledby="phimask-title">
-              <div class="project-stage project-stage--phimask">
-                <div class="film-frame film-frame--phimask">
-                  <img class="film-poster" src="/assets/work/phimask-poster.webp" width="1440" height="810" alt="" loading="lazy">
-                  <video class="project-film" id="phimask-film" muted loop playsinline preload="none" poster="/assets/work/phimask-poster.webp" aria-hidden="true"><source data-src="/assets/work/phimask.mp4" type="video/mp4"></video>
+            <article class="project" aria-labelledby="clamp-title">
+              <div class="project-stage project-stage--clamp">
+                <div class="film-frame film-frame--clamp">
+                  <img class="film-poster" src="/assets/work/clamp-poster.webp" width="816" height="332" alt="" loading="lazy">
+                  <video class="project-film" id="clamp-film" muted loop playsinline preload="none" poster="/assets/work/clamp-poster.webp" aria-hidden="true"><source data-src="/assets/work/clamp.mp4" type="video/mp4"></video>
                 </div>
+                <span class="stage-footnote" aria-hidden="true">Tokenization example</span>
               </div>
               <div class="project-caption">
-                <div><h3 id="phimask-title"><a href="https://phimask.com/">PHI Mask <span aria-hidden="true">↗</span></a></h3><p>Keep private details out of the prompt.</p></div>
-                <span class="project-type">Privacy tool</span>
+                <div><h3 id="clamp-title">clamp</h3><p>Token compression, and why I stopped.</p></div>
+                <span class="project-type">Retired project</span>
               </div>
-              <div class="project-detail"><p>I build the TypeScript extension and browser workflow for masking names, dates, and identifiers while keeping a document's useful content readable.</p><div class="project-actions"><a class="text-link" href="https://phimask.com/">Try PHI Mask <span aria-hidden="true">↗</span></a><a class="text-link" href="/assets/work/phimask.mp4">Watch full-size demo <span aria-hidden="true">↗</span></a></div></div>
-              <p class="sr-only">The demonstration masks identifiers in a fictional medical record while keeping the lab results visible.</p>
+              <div class="project-detail"><p>I built Clamp in Rust, then moved it to a TypeScript Chrome extension. I decided to shut it down after discovering a savings-accounting flaw in RTK and publishing the reproduction.</p><p>As of <time datetime="2026-09-11">September 11, 2026</time>, RTK's founders are working on the issue.</p><div class="project-actions"><a class="text-link" href="https://github.com/rtk-ai/rtk/issues/2805">Read the report &amp; discussion <span aria-hidden="true">↗</span></a><a class="text-link" href="/assets/work/clamp.mp4">Watch archived demo <span aria-hidden="true">↗</span></a></div></div>
+              <p class="sr-only">The archived animation shows repeated context becoming a shorter representation. This is a demonstration, not a production savings measurement.</p>
             </article>
           </div>
         </section>
 
         <section class="research-section" id="research" aria-labelledby="research-title">
-          <div class="section-intro"><p class="eyebrow">Investigation</p><h2 id="research-title">The numbers should<br>hold up.</h2><p>I also investigate security, performance, and the gap between what a system reports and what it actually does.</p></div>
+          <div class="section-intro"><h2 id="research-title">The numbers should<br>hold up.</h2><p>I also investigate security, performance, and the gap between what a system reports and what it actually does.</p></div>
           <div class="research-list">
-            <a class="research-row" href="https://github.com/rtk-ai/rtk/issues/2805"><span class="research-category">Measurement</span><div><h3>Auditing token savings <span aria-hidden="true">↗</span></h3><p>Published a reproduction of a savings-accounting error exceeding 10,000× in one case. Traced the result to the wrong baseline.</p></div><span class="research-status">Public report</span></a>
+            <a class="research-row" href="https://github.com/rtk-ai/rtk/issues/2805"><span class="research-category">AI audit</span><div><h3>RTK <span aria-hidden="true">↗</span></h3><p>Found a <strong>&gt;10,000×</strong> savings overstatement in a <strong>70,000-star</strong> AI tool by tracing its code, token flow and accounting.</p></div><span class="research-status">Public report</span></a>
             <div class="research-row"><span class="research-category">Performance</span><div><h3>PostHog SDK</h3><p>Found a regex bug whose fix made affected page loads about 10 seconds faster.</p></div><span class="research-status">Awarded</span></div>
             <div class="research-row"><span class="research-category">Security</span><div><h3>Tesla</h3><p>Reported a payment-flow flaw involving a declined upgrade.</p></div><span class="research-status">Awarded</span></div>
-            <div class="research-row"><span class="research-category">Model limits</span><div><h3>Gemini</h3><p>Reported a prompt exploit that bypassed token caps.</p></div><span class="research-status">Reported &amp; fixed</span></div>
+            <div class="research-row"><span class="research-category">Model limits</span><div><h3>Gemini</h3><p><strong>2.5B-token</strong> prompt exploit bypassed token caps; reported &amp; fixed.</p></div><span class="research-status">Thanked</span></div>
           </div>
         </section>
         <section class="about-section" id="about" aria-labelledby="about-title">
-          <div><p class="eyebrow">A little context</p><h2 id="about-title">An engineer<br>with a founder's view.</h2></div>
-          <div class="about-copy"><p>I founded Can I Pay Less, a credit-card rewards comparison business acquired by Ratehub. There, I worked on PostgreSQL/PostGIS indexing and bottlenecks as the site grew to millions of monthly visitors.</p><p>At Portia International, I led four developers modernizing a healthcare platform used by thousands of people. At Adaptive Pulse, I managed a team of seven.</p><p>I later co-founded Perkify and FileLasso with business and product partners. Today I work independently on document workflows, citation verification, token compression, and privacy.</p><p>I'm also an angel investor and a former board director and Finance Committee member of the Queensway Carleton Hospital Foundation.</p><div class="about-links"><a class="text-link" href="https://filelasso.com/">FileLasso <span aria-hidden="true">↗</span></a><a class="text-link" href="https://www.ratehub.ca/blog/looking-back-at-2014/">The Ratehub chapter <span aria-hidden="true">↗</span></a></div></div>
+          <div><h2 id="about-title">An engineer<br>with a founder's view.</h2></div>
+          <div class="about-copy"><p>I founded Can I Pay Less, a credit-card rewards comparison business acquired by Ratehub. There, I worked on PostgreSQL/PostGIS indexing and bottlenecks as the site grew to millions of monthly visitors.</p><p>At Portia International, I led four developers modernizing a healthcare platform used by thousands of special needs educators. At Adaptive Pulse, I managed a team of seven.</p><p>I co-founded Perkify with <a href="https://www.rinkventures.com/">Alexander Rink</a>, a startup founder and investor. I later co-founded FileLasso with <a href="https://www.linkedin.com/in/kristincarr">Kristin Condit</a>, a product leader who spent 15 years at Microsoft. Today I work independently on document workflows, citation verification, and privacy.</p><p>I'm also an angel investor and a former board director and Finance Committee member of the Queensway Carleton Hospital Foundation.</p><div class="about-links"><a class="text-link" href="https://filelasso.com/">FileLasso <span aria-hidden="true">↗</span></a><a class="text-link" href="https://www.ratehub.ca/blog/looking-back-at-2014/">The Ratehub chapter <span aria-hidden="true">↗</span></a></div></div>
         </section>
         <section class="contact-section" id="contact" aria-labelledby="contact-title">
-          <p class="eyebrow">Engineering, products, or a good hard problem</p>
           <h2 id="contact-title">Let's talk.</h2>
           <div class="contact-links"><a href="https://www.linkedin.com/in/bensonwong/">Connect on LinkedIn <span aria-hidden="true">↗</span></a><a href="https://github.com/bensonwong">GitHub <span aria-hidden="true">↗</span></a><a href="https://filelasso.com/contact?subject=sales">Discuss a project <span aria-hidden="true">↗</span></a></div>
         </section>
       </main>
-      <footer class="site-footer"><span>Benson Wong</span><span>Built in Edmonton, Canada.</span><a href="#main">Back to top <span aria-hidden="true">↑</span></a></footer>
+      <footer class="site-footer"><span>Benson Wong</span><span>Built in Canada.</span><a href="#main">Back to top <span aria-hidden="true">↑</span></a></footer>
     </div>
   </body>
 </html>
