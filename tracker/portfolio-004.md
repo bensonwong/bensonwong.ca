@@ -44,3 +44,10 @@ Static images are source previews, not claims of completed masking.
 - Media files are unchanged copies of the shipped assets, approximately 23 MB
   across both viewport variants. They are not eagerly fetched as a set.
 - Local changes only. No deployment, push, or external write.
+
+## Publication and timeline correction
+
+The owner approved publishing after review. Pushed the approved work to main
+on 2026-09-11; GitHub Pages reported commit 58af88e built successfully.
+The owner then corrected the old resume's Adaptive Pulse start year: the role
+followed Portia rather than overlapping it. The public timeline now says 2022.
