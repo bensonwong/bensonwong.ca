@@ -4,6 +4,12 @@ These recordings accompany Benson Wong's portfolio. Product media retains its ow
 
 - `clamp.mp4` and `clamp-poster.webp` reuse the owner-requested clamp hero animation. No open-source license is asserted for this product media.
 - `phimask.mp4` and `phimask-poster.webp` reuse PHI Mask's public [capture demonstration](https://phimask.com/landing/capture/phimask-capture-wide.mp4). Its document is a fictional mock. No open-source license is asserted for this product media.
+- `phimask-*-wide` and `phimask-*-square` PNG/MP4 pairs reuse all eight
+  shipped PHI Mask carousel examples without changing their bytes. The PNGs
+  are source-selection previews, not completed masking results. Files were
+  copied from the owner's `deepclamp-web/public/landing/capture` assets on
+  2026-09-11, revision `p-mark-a`. These are fictional demo records; no
+  open-source license is asserted for the product media.
 - `deepcitation.mp4` and `deepcitation-poster.webp` derive from the [DeepCitation README demo](https://github.com/DeepCitation/deepcitation/blob/main/examples/assets/deepcitation-demo.avif). The project's MIT notice follows. The source article remains credited within the recording; this notice does not relicense third-party source material.
 
 ## DeepCitation MIT notice

@@ -1,3 +1,5 @@
+import { createPhimaskCarousel } from "./phimask-carousel.js";
+
 (() => {
   const career = document.querySelector(".career");
   const intro = document.querySelector(".intro-grid");
@@ -18,6 +20,8 @@
   const preference = window.matchMedia("(prefers-reduced-motion: reduce)");
   let motionEnabled = !preference.matches && !navigator.connection?.saveData;
   const visible = new Set();
+  let carousel = null;
+  const heroVideo = document.querySelector("#phimask-film");
 
   function updateToggle() {
     toggle.querySelector("[data-motion-label]").textContent = motionEnabled ? "Pause motion" : "Play motion";
@@ -25,7 +29,8 @@
   }
 
   function syncVideo(video) {
-    if (!motionEnabled || document.hidden || !visible.has(video) || video.dataset.failed) {
+    if (!motionEnabled || document.hidden || !visible.has(video) || video.dataset.failed ||
+        (video === heroVideo && carousel?.isHeld())) {
       video.pause();
       return;
     }
@@ -35,7 +40,9 @@
       video.load();
     }
     video.muted = true;
+    const requestedSource = source.src;
     video.play().catch((error) => {
+      if (source.src !== requestedSource) return;
       // Browsers may deny autoplay. Keep the poster and allow a user-initiated retry.
       if (error.name === "AbortError" || !motionEnabled || document.hidden || !visible.has(video)) return;
       if (error.name !== "NotAllowedError") {
@@ -54,6 +61,18 @@
     videos.forEach(syncVideo);
   }
 
+  carousel = createPhimaskCarousel(heroVideo, {
+    onChange: syncAll,
+    onPause: () => { motionEnabled = false; syncAll(); },
+    onSelect: () => {
+      motionEnabled = !preference.matches && !navigator.connection?.saveData;
+      syncAll();
+    },
+  });
+  heroVideo?.addEventListener("ended", () => {
+    if (motionEnabled && !document.hidden && visible.has(heroVideo) && !carousel?.isHeld()) carousel?.next();
+  });
+
   const observer = new IntersectionObserver((entries) => {
     for (const entry of entries) {
       if (entry.isIntersecting && entry.intersectionRatio >= 0.1) visible.add(entry.target);
@@ -65,6 +84,7 @@
   for (const video of videos) {
     video.addEventListener("playing", () => { video.dataset.ready = ""; });
     const showPoster = () => {
+      if (!video.querySelector("source").hasAttribute("src")) return;
       video.dataset.failed = "true";
       delete video.dataset.ready;
     };

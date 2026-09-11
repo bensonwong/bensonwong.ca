@@ -8,6 +8,18 @@ const check = (condition, message) => { if (!condition) failures.push(message); 
 for (const name of ["index.html", "404.html"]) {
   const html = await Bun.file(resolve(root, name)).text();
   check((html.match(/<h1\b/g) || []).length === 1, `${name}: expected one h1`);
+  if (name === "index.html") {
+    const examples = [...html.matchAll(/data-example="([^"]+)"/g)].map(match => match[1]);
+    check(examples.length === 8 && new Set(examples).size === 8, "Expected eight distinct PHI Mask examples");
+    for (const example of examples) {
+      for (const size of ["wide", "square"]) {
+        for (const extension of ["png", "mp4"]) {
+          const asset = `assets/work/phimask-${example}-${size}.${extension}`;
+          check(await Bun.file(resolve(root, asset)).exists(), `Missing carousel asset: ${asset}`);
+        }
+      }
+    }
+  }
   const ids = [...html.matchAll(/\bid="([^"]+)"/g)].map((match) => match[1]);
   check(new Set(ids).size === ids.length, `${name}: duplicate element IDs`);
   for (const [, link] of html.matchAll(/\b(?:href|src|poster|data-src)="([^"]+)"/g)) {
